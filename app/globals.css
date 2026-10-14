@@ -1,26 +1,226 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f3f8fd;
+  --foreground: #102541;
+  --navy: #102b4e;
+  --blue: #2878d4;
+  --blue-light: #e8f3ff;
+  --muted: #718198;
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.92);
+  --line: rgba(130, 160, 190, 0.19);
+  --green: #0a9d76;
+  --red: #e05260;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  background: var(--background);
+  margin: 0;
   color: var(--foreground);
+  background:
+    radial-gradient(ellipse at 5% 0%, rgba(167, 216, 255, 0.34), transparent 34%),
+    radial-gradient(ellipse at 95% 18%, rgba(197, 229, 255, 0.48), transparent 32%),
+    linear-gradient(145deg, #f8fbff 0%, #edf5fc 52%, #f6faff 100%);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #cce5ff;
+  color: #102541;
+}
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 12px 36px rgba(31, 70, 110, 0.055),
+              inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 50px rgba(31, 70, 110, 0.08);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+}
+
+.couba-gradient {
+  background: linear-gradient(135deg, #153b67, #2878d4);
+}
+
+.couba-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 13px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #173b65, #2878d4);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  box-shadow: 0 6px 18px rgba(40, 120, 212, 0.2);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.couba-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 24px rgba(40, 120, 212, 0.27);
+}
+
+.couba-button:active {
+  transform: translateY(0);
+}
+
+.couba-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+  transform: none;
+}
+
+.couba-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 12px;
+  color: #193a60;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(104, 143, 183, 0.22);
+  transition: background 160ms ease;
+}
+
+.couba-outline:hover {
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.couba-input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 13px;
+  outline: none;
+  color: #102541;
+  background: rgba(245, 249, 255, 0.85);
+  border: 1px solid rgba(122, 153, 187, 0.23);
+  border-radius: 12px;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.couba-input:focus {
+  border-color: #6ba8e9;
+  box-shadow: 0 0 0 3px rgba(67, 146, 225, 0.11);
+}
+
+.couba-input::placeholder {
+  color: #98a6b8;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.positive {
+  color: var(--green);
+}
+
+.negative {
+  color: var(--red);
+}
+
+.section-label {
+  color: #74879d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.thin-divider {
+  border-color: var(--line);
+}
+
+@keyframes glass-appear {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glass-appear {
+  animation: glass-appear 350ms ease both;
+}
+
+@media (max-width: 640px) {
+  body {
+    background:
+      radial-gradient(ellipse at 0% 0%, rgba(167, 216, 255, 0.25), transparent 38%),
+      linear-gradient(160deg, #f8fbff, #edf5fc 60%, #f7faff);
+  }
+
+  .glass,
+  .glass-strong {
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  .couba-button {
+    min-height: 40px;
+    padding: 0 13px;
+  }
+
+  .couba-outline {
+    min-height: 38px;
+    padding: 0 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

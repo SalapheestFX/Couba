@@ -39,3 +39,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Backup files
+*.backup
+*.before-*
+*.pre-redesign
+*.safe-backup
+
+# Component backups
+app/components/*.backup
+app/components/*.cta-backup
+app/components/*.logo-backup
