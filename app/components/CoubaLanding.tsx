@@ -55,7 +55,7 @@ export default function CoubaLanding({
             </Link>
             <Link
               href="/signup"
-              className="rounded-xl bg-gradient-to-r from-[#3984f7] to-[#1769e0] px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:from-[#2875ed] hover:to-[#1259cb] hover:shadow-lg hover:shadow-blue-500/30 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-200"
+              className="rounded-xl border border-[#1769e0]/15 bg-white/70 px-5 py-2.5 text-sm font-bold text-[#1769e0] shadow-sm shadow-blue-900/5 backdrop-blur-xl transition-all duration-200 hover:-translate-y-0.5 hover:border-[#1769e0]/30 hover:bg-blue-50/90 hover:shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-200"
             >
               Sign up
             </Link>
@@ -89,7 +89,7 @@ export default function CoubaLanding({
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <Link
                 href="/signup"
-                className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-[#3984f7] to-[#1769e0] px-8 py-4 text-sm font-bold text-white shadow-lg shadow-blue-500/25 transition-all duration-200 hover:-translate-y-0.5 hover:from-[#2875ed] hover:to-[#1259cb] hover:shadow-xl hover:shadow-blue-500/30 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-200"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl border border-[#1769e0]/20 bg-white/70 px-8 py-4 text-sm font-bold text-[#1769e0] shadow-md shadow-blue-900/5 backdrop-blur-xl transition-all duration-200 hover:-translate-y-0.5 hover:border-[#1769e0]/35 hover:bg-blue-50/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-200"
               >
                 Get started <span className="ml-2">↗</span>
               </Link>
@@ -433,7 +433,7 @@ export default function CoubaLanding({
             </p>
             <Link
               href="/signup"
-              className="mt-8 inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-white to-blue-50 px-7 py-3.5 text-sm font-bold text-[#1769e0] shadow-lg shadow-blue-950/10 ring-1 ring-white/80 transition-all duration-200 hover:-translate-y-0.5 hover:from-white hover:to-blue-100 hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50"
+              className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl border border-white/60 bg-white/15 px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#153754]/20 backdrop-blur-xl transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/25 hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
             >
               Create your account <span className="ml-2">↗</span>
             </Link>
