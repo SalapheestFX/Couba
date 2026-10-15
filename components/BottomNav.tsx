@@ -1,12 +1,12 @@
 "use client";
 
-import { House, ChartNoAxesCombined, ArrowLeftRight, Wallet } from "lucide-react";
+import { House, ChartNoAxesCombined, RefreshCw, Wallet } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const items = [
   { label: "Home", icon: House, href: "/dashboard" },
   { label: "Markets", icon: ChartNoAxesCombined, href: "/markets" },
-  { label: "Trade", icon: ArrowLeftRight, href: "/trade" },
+  { label: "Trade", icon: RefreshCw, href: "/trade" },
   { label: "Assets", icon: Wallet, href: "/assets" },
 ];
 
