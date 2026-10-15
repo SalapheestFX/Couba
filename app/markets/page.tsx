@@ -215,7 +215,7 @@ export default function MarketsPage() {
       <div className="relative z-10 mx-auto max-w-6xl space-y-4 px-3 pt-4 sm:px-6 sm:pt-5">
         <section className="overflow-hidden rounded-[24px] border border-white/80 bg-white/30 shadow-[0_12px_38px_rgba(38,104,160,0.06)] backdrop-blur-2xl">
           <div className="border-b border-sky-50 p-3 sm:p-4">
-            <div className="mb-1 flex items-center justify-between gap-3"><h2 className="text-sm font-bold text-[#153754]">All cryptocurrencies</h2><span className="rounded-full border border-sky-100 bg-sky-50/80 px-2.5 py-1 text-[10px] font-bold text-[#2675b5]">LIVE DATA</span></div>
+            <div className="mb-1 flex items-center justify-between gap-3"><h2 className="text-sm font-bold text-[#153754]">All cryptocurrencies</h2></div>
 
             <div className="mt-3 flex flex-col gap-2.5 sm:flex-row">
               <label className="flex min-w-0 flex-1 items-center gap-2 rounded-xl border border-[#e4edf5] bg-white/50 px-3 py-2.5 backdrop-blur-xl sm:max-w-sm">
