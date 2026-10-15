@@ -1,4 +1,5 @@
 "use client";
+
 import CoubaHero from "./components/CoubaHero";
 import CoubaLanding from "./components/CoubaLanding";
 

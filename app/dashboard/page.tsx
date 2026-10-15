@@ -1,8 +1,38 @@
 "use client";
 
+import BottomNav from "@/components/BottomNav";
+
 import {
-  useEffect, useState } from "react"; import Link from "next/link"; import {   Search, Bell, UserRound, ChevronRight, ArrowUpRight, Settings, ShieldCheck, Clock3, Bookmark, CircleHelp, LogIn, X, ArrowDownLeft, Wallet, Repeat2, Star, Eye, EyeOff, TrendingUp, LayoutGrid, CandlestickChart, History, RefreshCw, House, ChartNoAxesCombined, ArrowLeftRight, WalletCards,
-} from "lucide-react";
+  useEffect, useState } from "react"; import Link from "next/link"; import {
+  Search,
+  Bell,
+  UserRound,
+  ChevronRight,
+  ArrowUpRight,
+  Settings,
+  ShieldCheck,
+  Clock3,
+  Bookmark,
+  CircleHelp,
+  LogIn,
+  X,
+  ArrowDownLeft,
+  Wallet,
+  Repeat2,
+  Star,
+  Eye,
+  EyeOff,
+  TrendingUp,
+  LayoutGrid,
+  CandlestickChart,
+  History,
+  RefreshCw,
+  House,
+  ChartNoAxesCombined,
+  ArrowLeftRight,
+  WalletCards,
+  Coins
+} from 'lucide-react';
 
 type Coin = {
   id: string;
@@ -380,21 +410,8 @@ export default function Dashboard() {
         </p>
       </div>
 
-      <nav className="fixed inset-x-0 bottom-0 z-40 px-4 pb-[max(10px,env(safe-area-inset-bottom))] md:hidden">
-        <div className="mx-auto grid w-full max-w-[290px] grid-cols-4 rounded-[30px] border border-white bg-white/95 px-1.5 py-1.5 shadow-[0_8px_24px_rgba(35,91,145,0.14)] ring-1 ring-sky-100/70 backdrop-blur-2xl">
-          {[
-            { label: "Home", icon: House, href: "/dashboard" },
-            { label: "Markets", icon: ChartNoAxesCombined, href: "/trade" },
-            { label: "Trade", icon: ArrowLeftRight, href: "/trade" },
-            { label: "Asset", icon: Wallet, href: "#profile-menu" },
-          ].map(({ label, icon: Icon, href }, index) => (
-            <button key={label} onClick={() => label === "Profile" ? (setProfileOpen(!profileOpen), window.scrollTo({ top: 0, behavior: "smooth" })) : (window.location.href = href)} className={`flex flex-col items-center justify-center gap-0.5 rounded-xl py-1 text-[6px] leading-tight transition-all duration-200 font-medium text-[#71869b]`}>
-              <Icon size={16} strokeWidth={index === 0 ? 2.2 : 1.8} />
-              {label}
-            </button>
-          ))}
-        </div>
-      </nav>
+      
+      <BottomNav />
     </main>
   );
 }
